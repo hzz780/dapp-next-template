@@ -25,21 +25,3 @@ export default function RootLayout({
     </html>
   );
 }
-//
-// if (typeof window !== "undefined") {
-//   console.log('???? ', typeof window);
-//   window.onerror = (a, b, c, d, e) => {
-//     console.log(`message: ${a}`);
-//     console.log(`source: ${b}`);
-//     console.log(`lineno: ${c}`);
-//     console.log(`colno: ${d}`);
-//     console.log(`error: ${e}`);
-//
-//     return true;
-//   };
-// }
-// if (typeof window !== "undefined") {
-//   process.on('uncaughtException', function (err) {
-//     console.log('uncaughtException:', err);
-//   })
-// }
