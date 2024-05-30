@@ -14,7 +14,7 @@ export default function BridgePage() {
       console.log('AElfBridge: ', AElfBridge);
       const bridgeInstance = new AElfBridge({
         timeout: 3000,
-        endpoint: 'https://tdvv-public-node.aelf.io',
+        // endpoint: 'https://tdvv-public-node.aelf.io',
       });
       bridgeInstance.connect().then((isConnected: boolean) => {
         console.log('isConnected', isConnected);
