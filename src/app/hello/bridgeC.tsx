@@ -14,7 +14,7 @@ export default function BridgePage() {
       console.log('AElfBridge: ', AElfBridge);
       const bridgeInstance = new AElfBridge({
         timeout: 3000,
-        // endpoint: 'https://tdvv-public-node.aelf.io',
+        endpoint: 'https://tdvv-public-node.aelf.io',
       });
       bridgeInstance.connect().then((isConnected: boolean) => {
         console.log('isConnected', isConnected);
@@ -24,6 +24,17 @@ export default function BridgePage() {
       });
     }}
     >Click to Login</div>
+    <div onClick={() => {
+      if (!bridgeInstance) {
+        console.log('Please login first');
+        return;
+      }
+      bridgeInstance.account().then((res: any) => {
+        console.log('account:', res);
+      })
+    }}>
+      click to get account
+    </div>
     <div
       onClick={() => {
         console.log('Hello world');
@@ -34,13 +45,14 @@ export default function BridgePage() {
         const tokenAddress = 'ELF_7RzVGiuVWkvL4VfVHdZfQF2Tri3sgLe9U991bohHFfSRZXuGX_tDVV'; // 合约地址可通过零合约的`GetContractAddressByName`只读方法获取
         bridgeInstance.chain.contractAt(tokenAddress).then(async (contract: any) => {
           const tokenInfo = await contract.GetTokenInfo.call({symbol: 'ELF'});
+          console.log('tokenInfo: ', tokenInfo);
           const transactionId = await contract.Approve({
             amount: "10000000000",
             spender: "FveRXL9PgVhMkoDcPh9jCkjF8WxW2K2aA72xAx4ngPqYnpNVw",
             symbol: "ELF",
           });
           console.log(transactionId);
-          alert('transactionId: ' + transactionId);
+          // alert('transactionId: ' + transactionId);
         })
       }}
     >
