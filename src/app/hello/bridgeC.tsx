@@ -13,7 +13,7 @@ export default function BridgePage() {
     <SButton onClick={() => {
       console.log('AElfBridge: ', AElfBridge);
       const bridgeInstance = new AElfBridge({
-        timeout: 3000,
+        timeout: 20000,
         endpoint: 'https://tdvv-public-node.aelf.io',
       });
       bridgeInstance.connect().then((isConnected: boolean) => {
