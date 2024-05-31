@@ -69,7 +69,9 @@ export default function BridgePage() {
           console.log('proposalContract: ', proposalContract);
           const transactionId = await contract.Approve("9a0b558ac3e6d7e9c64c2bdc430045e317a2bb5c16dfa25dfc1de1586dfd998a");
           console.log(transactionId);
-        })
+        }).catch((error: any) => {
+          console.log('proposal approve: ', error);
+        });
       }}
     >
       Click to Approve, Proposal
