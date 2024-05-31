@@ -6,7 +6,7 @@ import dynamic from 'next/dynamic';
 export default function Page() {
 
   return <>
-    <h1>Hello Page!</h1>
+    <h1>Hello BP!</h1>
     <DynamicChartComponent />
   </>
 }

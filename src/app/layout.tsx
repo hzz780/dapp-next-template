@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       {/*<ErrorBoundary>*/}
-      <body className={inter.className}><div>GA Test1</div>{children}</body>
+      <body className={inter.className}>{children}</body>
       {/*</ErrorBoundary>*/}
       <GoogleAnalytics gaId="G-0YWG600C1W" />
     </html>

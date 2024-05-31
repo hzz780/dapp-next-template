@@ -2,15 +2,15 @@
 import AElfBridge from 'aelf-bridge';
 import {useState} from 'react';
 import VConsole from 'vconsole';
+import SButton from './sentry-case/components/Button';
 const vConsole = new VConsole();
 // or init with options
 export default function BridgePage() {
   const [bridgeInstance, setBridgeInstance] = useState<any>(null);
+  const [account, setAccount] = useState();
+  const [transactionId, setTransactionId] = useState();
   return <>
-    <div onClick={() => {
-      throw Error('click to throw error');
-    }}>Click</div>
-    <div onClick={() => {
+    <SButton onClick={() => {
       console.log('AElfBridge: ', AElfBridge);
       const bridgeInstance = new AElfBridge({
         timeout: 3000,
@@ -18,63 +18,74 @@ export default function BridgePage() {
       });
       bridgeInstance.connect().then((isConnected: boolean) => {
         console.log('isConnected', isConnected);
+        bridgeInstance.account().then((res: any) => {
+          setAccount(res);
+          console.log('account:', res);
+        })
         setBridgeInstance(bridgeInstance);
       }).catch((err: any) => {
         console.log('err:', err);
       });
     }}
-    >Click to Login</div>
-    <div onClick={() => {
-      if (!bridgeInstance) {
-        console.log('Please login first');
-        return;
-      }
-      bridgeInstance.account().then((res: any) => {
-        console.log('account:', res);
-      })
-    }}>
-      click to get account
-    </div>
-    <div
-      onClick={() => {
-        console.log('Hello world', 'no end point');
+    >Step1: Click to Login</SButton>
+    {/*<SButton onClick={() => {*/}
+    {/*  if (!bridgeInstance) {*/}
+    {/*    console.log('Please login first');*/}
+    {/*    return;*/}
+    {/*  }*/}
+    {/*  bridgeInstance.account().then((res: any) => {*/}
+    {/*    console.log('account:', res);*/}
+    {/*  })*/}
+    {/*}}>*/}
+    {/*  Step2: click to get account*/}
+    {/*</SButton>*/}
+    {/*<SButton*/}
+    {/*  onClick={() => {*/}
+    {/*    console.log('Hello world', 'no end point');*/}
+    {/*    if (!bridgeInstance) {*/}
+    {/*      console.log('Please login first');*/}
+    {/*      return;*/}
+    {/*    }*/}
+    {/*    const tokenAddress = 'ELF_7RzVGiuVWkvL4VfVHdZfQF2Tri3sgLe9U991bohHFfSRZXuGX_tDVV'; // 合约地址可通过零合约的`GetContractAddressByName`只读方法获取*/}
+    {/*    bridgeInstance.chain.contractAt(tokenAddress).then(async (contract: any) => {*/}
+    {/*      // const tokenInfo = await contract.GetTokenInfo.call({symbol: 'ELF'});*/}
+    {/*      // console.log('tokenInfo: ', tokenInfo);*/}
+    {/*      const transactionId = await contract.Approve({*/}
+    {/*        amount: "10000000000",*/}
+    {/*        spender: "FveRXL9PgVhMkoDcPh9jCkjF8WxW2K2aA72xAx4ngPqYnpNVw",*/}
+    {/*        symbol: "ELF",*/}
+    {/*      });*/}
+    {/*      console.log(transactionId);*/}
+    {/*      // alert('transactionId: ' + transactionId);*/}
+    {/*    })*/}
+    {/*  }}*/}
+    {/*>*/}
+    {/*  Click to Approve， Token*/}
+    {/*</SButton>*/}
+    <SButton
+      onClick={async () => {
         if (!bridgeInstance) {
           console.log('Please login first');
           return;
         }
-        const tokenAddress = 'ELF_7RzVGiuVWkvL4VfVHdZfQF2Tri3sgLe9U991bohHFfSRZXuGX_tDVV'; // 合约地址可通过零合约的`GetContractAddressByName`只读方法获取
-        bridgeInstance.chain.contractAt(tokenAddress).then(async (contract: any) => {
-          // const tokenInfo = await contract.GetTokenInfo.call({symbol: 'ELF'});
-          // console.log('tokenInfo: ', tokenInfo);
-          const transactionId = await contract.Approve({
-            amount: "10000000000",
-            spender: "FveRXL9PgVhMkoDcPh9jCkjF8WxW2K2aA72xAx4ngPqYnpNVw",
-            symbol: "ELF",
-          });
-          console.log(transactionId);
-          // alert('transactionId: ' + transactionId);
-        })
+        const proposalContractAddress = '4SGo3CUj3PPh3hC5oXV83WodyUaPHuz4trLoSTGFnxe84nqNr'; // 合约地址可通过零合约的`GetContractAddressByName`只读方法获取
+        const proposalContract = await bridgeInstance.chain.contractAt(proposalContractAddress);//.then(async (contract: any) => {
+        console.log('proposalContract: ', proposalContractAddress);
+        const transactionId = await proposalContract.Approve("831a9a4e6864ab9be76b0c9e6df96243f3214b21e4b2f25df4a51ffba315bf97");
+        console.log('transactionId: ', transactionId);
+        setTransactionId(transactionId);
       }}
     >
-      Click to Approve， Token
+      Step2: Click to Approve the Proposal
+    </SButton>
+    <div className="break-all">
+      {transactionId && <>
+        <div>Transaction Id: </div>
+        <div>{transactionId}</div>
+        <a href={`https://tdvv-explorer.aelf.io/tx/${transactionId}`}>Click to explorer</a>
+      </>}
     </div>
-    <div
-      onClick={() => {
-        if (!bridgeInstance) {
-          console.log('Please login first');
-          return;
-        }
-        const proposalContract = '4SGo3CUj3PPh3hC5oXV83WodyUaPHuz4trLoSTGFnxe84nqNr'; // 合约地址可通过零合约的`GetContractAddressByName`只读方法获取
-        bridgeInstance.chain.contractAt(proposalContract).then(async (contract: any) => {
-          console.log('proposalContract: ', proposalContract);
-          const transactionId = await contract.Approve("9a0b558ac3e6d7e9c64c2bdc430045e317a2bb5c16dfa25dfc1de1586dfd998a");
-          console.log(transactionId);
-        }).catch((error: any) => {
-          console.log('proposal approve: ', error);
-        });
-      }}
-    >
-      Click to Approve, Proposal
-    </div>
+    <div className="break-all">Proposal id: 831a9a4e6864ab9be76b0c9e6df96243f3214b21e4b2f25df4a51ffba315bf97</div>
+    <div className="break-all">Account: {JSON.stringify(account)}</div>
   </>
 }

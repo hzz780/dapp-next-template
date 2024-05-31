@@ -19,12 +19,12 @@ const config: Config = {
     },
   },
   plugins: [],
-  purge: {
-    content: [
-      './pages/**/*.{js,ts,jsx,tsx}',
-      './components/**/*.{js,ts,jsx,tsx}',
-    ],
-    enabled: process.env.NODE_ENV === 'production', // Enable purge in production
-  },
+  // purge: {
+  //   content: [
+  //     './pages/**/*.{js,ts,jsx,tsx}',
+  //     './components/**/*.{js,ts,jsx,tsx}',
+  //   ],
+  //   enabled: process.env.NODE_ENV === 'production', // Enable purge in production
+  // },
 };
 export default config;
