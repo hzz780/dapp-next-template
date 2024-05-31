@@ -8,7 +8,7 @@ const vConsole = new VConsole();
 export default function BridgePage() {
   const [bridgeInstance, setBridgeInstance] = useState<any>(null);
   const [account, setAccount] = useState();
-  const [transactionId, setTransactionId] = useState();
+  const [transactionId, setTransactionId] = useState<any>();
   return <>
     <SButton onClick={() => {
       console.log('AElfBridge: ', AElfBridge);
@@ -79,10 +79,10 @@ export default function BridgePage() {
       Step2: Click to Approve the Proposal
     </SButton>
     <div className="break-all">
-      {transactionId && <>
+      {transactionId && transactionId.TransactionId && <>
         <div>Transaction Id: </div>
-        <div>{transactionId}</div>
-        <a href={`https://tdvv-explorer.aelf.io/tx/${transactionId}`}>Click to explorer</a>
+        <div>{transactionId.TransactionId}</div>
+        <a href={`https://tdvv-explorer.aelf.io/tx/${transactionId.TransactionId}`}>Click to explorer</a>
       </>}
     </div>
     <div className="break-all">Proposal id: 831a9a4e6864ab9be76b0c9e6df96243f3214b21e4b2f25df4a51ffba315bf97</div>
