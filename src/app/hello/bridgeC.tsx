@@ -87,5 +87,18 @@ export default function BridgePage() {
     </div>
     <div className="break-all">Proposal id: 831a9a4e6864ab9be76b0c9e6df96243f3214b21e4b2f25df4a51ffba315bf97</div>
     <div className="break-all">Account: {JSON.stringify(account)}</div>
+    <div> --- </div>
+    <div onClick={async () => {
+      if (!bridgeInstance) {
+        console.log('Please login first');
+        return;
+      }
+      const proposalContractAddress = '4SGo3CUj3PPh3hC5oXV83WodyUaPHuz4trLoSTGFnxe84nqNr'; // 合约地址可通过零合约的`GetContractAddressByName`只读方法获取
+      const proposalContract = await bridgeInstance.chain.contractAt(proposalContractAddress);//.then(async (contract: any) => {
+      console.log('proposalContract: ', proposalContractAddress);
+      const transactionId = await proposalContract.Approve("9a0b558ac3e6d7e9c64c2bdc430045e317a2bb5c16dfa25dfc1de1586dfd998a");
+      console.log('transactionId: ', transactionId);
+      setTransactionId(transactionId);
+    }}>Test only</div>
   </>
 }
