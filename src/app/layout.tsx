@@ -1,10 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { AntdRegistry } from '@ant-design/nextjs-registry';
 import { GoogleAnalytics } from '@next/third-parties/google';
-import "./globals.css";
-// import ErrorBoundary from '@/components/ErrorBoundary';
-
-const inter = Inter({ subsets: ["latin"] });
+import "./ui/globals.css";
+import { inter } from '@/app/ui/fonts';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,9 +16,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {/*<ErrorBoundary>*/}
-      <body className={inter.className}>{children}</body>
-      {/*</ErrorBoundary>*/}
+      <AntdRegistry>
+        <body className={`${inter.className} antialiased`}>{children}</body>
+      </AntdRegistry>
       <GoogleAnalytics gaId="G-0YWG600C1W" />
     </html>
   );
