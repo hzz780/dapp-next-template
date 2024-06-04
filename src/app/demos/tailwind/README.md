@@ -110,13 +110,17 @@ Configure the plugin in .prettierrc file:
 ```
 
 ## 7. Minimize CSS in Production [Template Default]
+https://tailwindcss.com/docs/optimizing-for-production
 
 ```javascript
 // if process.env.NODE_ENV === 'production'
-// tailwind.config.js
+// postcss.config.js
 module.exports = {
-  purge: ['./src/**/*.{js,ts,jsx,tsx}', './public/index.html'],
-  // ...
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+    ...(process.env.NODE_ENV === 'production' ? { cssnano: {} } : {})
+  }
 }
 ```
 
