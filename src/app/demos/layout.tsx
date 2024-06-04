@@ -25,8 +25,10 @@ export default function HelloLayout({
         <SideBarItem><Link href="/demos?id=12345">demo home with search params</Link></SideBarItem>
         <SideBarItem><Link href="/demos/tailwind">tailwind</Link></SideBarItem>
         <SideBarItem><Link href="/demos/image">image desktop and mobile</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/fonts">fonts</Link></SideBarItem>
         <SideBarItem><Link href="/demos/sentry">sentry</Link></SideBarItem>
         <SideBarItem><Link href="/demos/aelf-web3/sdk">aelf-web3 sdk</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/aelf-design">aelf-design</Link></SideBarItem>
         <div>
           <p>Show link path here</p>
           <NavLinks />

@@ -8,5 +8,8 @@ export default function DifferentFonts() {
     <p className={`${lusitana.className} text-gray-800`}>
       lusitana font, your second fonts
     </p>
+    <p className={`${lusitana.className} text-gray-800 text-lg`}>
+      lusitana font, your second fonts
+    </p>
   </>
 }
