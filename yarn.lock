@@ -24,28 +24,12 @@
   dependencies:
     just-compare "^2.3.0"
 
-"@aelf-design/common@1.0.0-alpha.14":
-  version "1.0.0-alpha.14"
-  resolved "https://registry.npmjs.org/@aelf-design/common/-/common-1.0.0-alpha.14.tgz#961de14539521fbc4ed884ff0273a0e4414b68f3"
-  integrity sha512-RT5LvtxGXR3Q2V4OF15lDmtMJo4z002xRWGR+j/Pzaw33n+lJg+bxCfoxVKZmcpE1QlGtbtyB5FOgv9rP9ndBg==
-  dependencies:
-    "@ant-design/cssinjs" "^1.18.2"
-
 "@aelf-design/common@1.1.0":
   version "1.1.0"
   resolved "https://registry.npmjs.org/@aelf-design/common/-/common-1.1.0.tgz#2f8c2cf1facb9dbe5f60b29baaf8ec922f55278e"
   integrity sha512-a9QdvCco1EBuSvsGsTbFXGHdlqJm9VXqmkkftfHZRPIIUTWS4jLwpfyScG8f8mYV3tJOixW3Mk7AOk24/p92XQ==
   dependencies:
     "@ant-design/cssinjs" "^1.18.2"
-
-"@aelf-design/icons@1.0.0-alpha.15":
-  version "1.0.0-alpha.15"
-  resolved "https://registry.npmjs.org/@aelf-design/icons/-/icons-1.0.0-alpha.15.tgz#76b0ae463e3a44ade66525f9197ffe2494e3f021"
-  integrity sha512-l9h5BBKPR6jpLmU2GnXQxHbce0QVT1Fl4VjbQaru/j4EvhP2Nrs19BfXqVum+rvqLwLkvFz243cE72ztIBY7VA==
-  dependencies:
-    "@ant-design/cssinjs" "^1.18.2"
-    antd-style "^3.5.2"
-    classnames "^2.3.2"
 
 "@aelf-design/icons@1.1.0":
   version "1.1.0"
@@ -56,62 +40,61 @@
     antd-style "^3.5.2"
     classnames "^2.3.2"
 
-"@aelf-web-login/wallet-adapter-base@0.0.2-alpha.8", "@aelf-web-login/wallet-adapter-base@^0.0.2-alpha.8":
-  version "0.0.2-alpha.8"
-  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-base/-/wallet-adapter-base-0.0.2-alpha.8.tgz#7101504be2218343e0de5c13c93be28e56b20ec7"
-  integrity sha512-+K9WZ561jrP9Jrc/rhxADBk7Ne8ExyNy9MfrXJBiEeXJXsAL8G/ME5Uj6qCeC+enFYyUFX7wkHFaCHsSSPBUyg==
+"@aelf-web-login/wallet-adapter-base@0.0.2-alpha.9", "@aelf-web-login/wallet-adapter-base@^0.0.2-alpha.8":
+  version "0.0.2-alpha.9"
+  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-base/-/wallet-adapter-base-0.0.2-alpha.9.tgz#29006a4a389d63f68ce58a1d8511fbb2e9d2c072"
+  integrity sha512-tLOJFxGR1OmQY+3kjnBouqHzoIBqw8gDqg61QZt+hPgb3YolutLSmCUoVc/TDwJ3+l6JytGcjTrRRbbno5kMJw==
   dependencies:
     eventemitter3 "^5.0.1"
 
-"@aelf-web-login/wallet-adapter-bridge@0.0.2-alpha.8", "@aelf-web-login/wallet-adapter-bridge@^0.0.2-alpha.8":
-  version "0.0.2-alpha.8"
-  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-bridge/-/wallet-adapter-bridge-0.0.2-alpha.8.tgz#bd6acaa6a82885cf5cc63d281b76361477cccb50"
-  integrity sha512-MvfSmm6vz+7Z+bPNQTAiQ+7Fhl5IqTqFIOBeVPrCnYJrJ7/pwzDYQEio1ySvw/yeCYJeBeHico17MR+Z7rNdtg==
+"@aelf-web-login/wallet-adapter-bridge@0.0.2-alpha.9", "@aelf-web-login/wallet-adapter-bridge@^0.0.2-alpha.8":
+  version "0.0.2-alpha.9"
+  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-bridge/-/wallet-adapter-bridge-0.0.2-alpha.9.tgz#ad8da0c17ada2215795d90e467f44f78284121ee"
+  integrity sha512-QG5PT8bVZmEDEI+fnw0jkcH8meYECaTHndupn2ust9qS1H1kEjTg/9+CJxYSqacYUEQuOz6cM1DPT4xXMiauzw==
   dependencies:
-    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.8"
+    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.9"
     "@portkey/did-ui-react" "^2.6.2"
     "@reduxjs/toolkit" "^2.2.3"
-    aelf-design "1.0.0-alpha.17"
     react "^18.0.0"
     react-dom "^18.0.0"
 
 "@aelf-web-login/wallet-adapter-night-elf@^0.0.2-alpha.8":
-  version "0.0.2-alpha.8"
-  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-night-elf/-/wallet-adapter-night-elf-0.0.2-alpha.8.tgz#116e1cac9df270dced8c5d9f27580df21fc8f3b9"
-  integrity sha512-HMzVhHT+PyFEetV6SwALOzDvWD68grXDiH7Ee5HziuoTHzJnpAuWc915niPx33zse4WG05pkY1pwei9MAjz+jA==
+  version "0.0.2-alpha.9"
+  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-night-elf/-/wallet-adapter-night-elf-0.0.2-alpha.9.tgz#7aa19b2f090639ca8cd7cf46e104148aefbccf1a"
+  integrity sha512-feeFrk/HB106NWbsq6PzsqQpWmX5tZbAXxu34CFqgTcWZBQfHmqoppaXQ7WUxuqO/5nfj18S0r694EQ/cUwlDA==
   dependencies:
-    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.8"
+    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.9"
     "@portkey/contracts" "^2.6.2"
     aelf-bridge "^0.0.10"
     bn.js "^5.2.1"
 
 "@aelf-web-login/wallet-adapter-portkey-aa@^0.0.2-alpha.8":
-  version "0.0.2-alpha.8"
-  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-portkey-aa/-/wallet-adapter-portkey-aa-0.0.2-alpha.8.tgz#aeafec6ecb82a9f5c1f9ced6e3395399a3c31f6e"
-  integrity sha512-5uzq1xerKcyyeer5lAKzh/mQqYxR3BmW0asogu3ReNs5bu6eHcIxsk1uBFsB3oiglVC6Q5ZnoZfB9C8eZ/D/6A==
+  version "0.0.2-alpha.9"
+  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-portkey-aa/-/wallet-adapter-portkey-aa-0.0.2-alpha.9.tgz#1c389eaf747d060f9ce6f40dbfff5e7781d0700a"
+  integrity sha512-xrScufgqK0GQ6sAA7OpfbiWS/RfEzCE+2S6IYagvknIcjsmyG53BGpNVUfgxE4wZQ4PBl+06Ayp+9JsbEjAj3w==
   dependencies:
-    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.8"
+    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.9"
     "@portkey/contracts" "^2.6.2"
     "@portkey/did-ui-react" "^2.6.2"
     "@portkey/utils" "^2.4.5"
 
 "@aelf-web-login/wallet-adapter-portkey-discover@^0.0.2-alpha.8":
-  version "0.0.2-alpha.8"
-  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-portkey-discover/-/wallet-adapter-portkey-discover-0.0.2-alpha.8.tgz#946738934d7d0dcfb8c43ecedb4db721eda341fc"
-  integrity sha512-8M2qnz5LRl4M5WL2fas6hEzRhnZO+htTt71btPPckSjhKEN+89X7gFUkkD7GCbFH0IEECkeLBklOxByoh1m1ug==
+  version "0.0.2-alpha.9"
+  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-portkey-discover/-/wallet-adapter-portkey-discover-0.0.2-alpha.9.tgz#6bde876f387ec97d3dcfd0bdd9316d3e21473328"
+  integrity sha512-yWdLJByTeCfBa8QIYTUOF5eZDiV/zDDBl45lABMUKbqqnh8pOs+iYRUZ+UOphnBrGac+URBW4ojuKy6LGHNUmw==
   dependencies:
-    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.8"
+    "@aelf-web-login/wallet-adapter-base" "0.0.2-alpha.9"
     "@portkey/contracts" "^2.6.2"
     "@portkey/detect-provider" "^2.2.0"
     "@portkey/provider-types" "^2.2.0"
     bn.js "^5.2.1"
 
 "@aelf-web-login/wallet-adapter-react@^0.0.2-alpha.8":
-  version "0.0.2-alpha.8"
-  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-react/-/wallet-adapter-react-0.0.2-alpha.8.tgz#3a4f1b958d6e4bf522f71c6bf89d80bd275e4bb7"
-  integrity sha512-C2xaTDm7mbBvUh5HFTtSXoyg1+GucWproEWFwwk1PnPAHEutYnTc9GgPjEmN6+SOpH2hJH44C3Pn3piPcVL2tA==
+  version "0.0.2-alpha.9"
+  resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-react/-/wallet-adapter-react-0.0.2-alpha.9.tgz#61abc15e8435e06752baa646e35c0f474ccf0816"
+  integrity sha512-mOEqrFExPhZ7aewXXQW0E5Ig+65GfRzazeAviAYmZx4pq/fVuAIBGxZ+DOr1uL8VzPG+C3zNmUHH/cq+dSPx9Q==
   dependencies:
-    "@aelf-web-login/wallet-adapter-bridge" "0.0.2-alpha.8"
+    "@aelf-web-login/wallet-adapter-bridge" "0.0.2-alpha.9"
     react "^18.0.0"
     react-dom "^18.0.0"
 
@@ -344,17 +327,17 @@
     "@smithy/util-utf8" "^2.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-cognito-identity@3.588.0", "@aws-sdk/client-cognito-identity@^3.410.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.588.0.tgz#9e75826babe58a48ad5b01d25dc6fed6b7fbf98b"
-  integrity sha512-UrucggmHTpcR1UmAyA6OtL5ezCGuC34fBGnYSNxgXzmIGtvGKwYZhu580NPWV+vW1MjXnELQxppR/jCuD4HxPg==
+"@aws-sdk/client-cognito-identity@3.590.0", "@aws-sdk/client-cognito-identity@^3.410.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-cognito-identity/-/client-cognito-identity-3.590.0.tgz#b6ce70c5b58b620c74ffb27e0d0067d3e6641704"
+  integrity sha512-Nfn23x7yZgp1umB+Avvsw9t8XIFWEqNQcpJ10Q8RcI9bQ0SvR4OcnnVsBA0WFL53FVzVM2FAkjNrCMRaSe6xWw==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sso-oidc" "3.588.0"
-    "@aws-sdk/client-sts" "3.588.0"
+    "@aws-sdk/client-sso-oidc" "3.590.0"
+    "@aws-sdk/client-sts" "3.590.0"
     "@aws-sdk/core" "3.588.0"
-    "@aws-sdk/credential-provider-node" "3.588.0"
+    "@aws-sdk/credential-provider-node" "3.590.0"
     "@aws-sdk/middleware-host-header" "3.577.0"
     "@aws-sdk/middleware-logger" "3.577.0"
     "@aws-sdk/middleware-recursion-detection" "3.577.0"
@@ -392,17 +375,17 @@
     tslib "^2.6.2"
 
 "@aws-sdk/client-s3@^3.410.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-s3/-/client-s3-3.588.0.tgz#c3750e49176b57c714b5073eaed73029cff3506d"
-  integrity sha512-MyJs3sbgRtVOdT2xxdg/CmLk+t+dMg26nfEZucBFeJKFAHfTA74sjef9y+GQ2xFUNq+kqG1CnP8JGMiGx2ht0w==
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-s3/-/client-s3-3.590.0.tgz#27a419c3827f9b95cd74637391541a714693aff6"
+  integrity sha512-so+pNua0ihsHaSdskw8HCwruoYTAfYSEs3ix4GD1++83C96KaJp3udAutYiCA+84JXg9zitFa7eK7ORJAVZmTw==
   dependencies:
     "@aws-crypto/sha1-browser" "3.0.0"
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sso-oidc" "3.588.0"
-    "@aws-sdk/client-sts" "3.588.0"
+    "@aws-sdk/client-sso-oidc" "3.590.0"
+    "@aws-sdk/client-sts" "3.590.0"
     "@aws-sdk/core" "3.588.0"
-    "@aws-sdk/credential-provider-node" "3.588.0"
+    "@aws-sdk/credential-provider-node" "3.590.0"
     "@aws-sdk/middleware-bucket-endpoint" "3.587.0"
     "@aws-sdk/middleware-expect-continue" "3.577.0"
     "@aws-sdk/middleware-flexible-checksums" "3.587.0"
@@ -455,16 +438,16 @@
     "@smithy/util-waiter" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sso-oidc@3.588.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.588.0.tgz#85bfee176042bd68338fcf47099e0bb702804413"
-  integrity sha512-CTbgtLSg0y2jIOtESuQKkRIqRe/FQmKuyzFWc+Qy6yGcbk1Pyusfz2BC+GGwpYU+1BlBBSNnLQHpx3XY87+aSA==
+"@aws-sdk/client-sso-oidc@3.590.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-sso-oidc/-/client-sso-oidc-3.590.0.tgz#9125be2b46e970f8dd8089f2409943122a478c92"
+  integrity sha512-3yCLPjq6WFfDpdUJKk/gSz4eAPDTjVknXaveMPi2QoVBCshneOnJsV16uNKlpVF1frTHrrDRfKYmbaVh6nFBvQ==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sts" "3.588.0"
+    "@aws-sdk/client-sts" "3.590.0"
     "@aws-sdk/core" "3.588.0"
-    "@aws-sdk/credential-provider-node" "3.588.0"
+    "@aws-sdk/credential-provider-node" "3.590.0"
     "@aws-sdk/middleware-host-header" "3.577.0"
     "@aws-sdk/middleware-logger" "3.577.0"
     "@aws-sdk/middleware-recursion-detection" "3.577.0"
@@ -501,10 +484,10 @@
     "@smithy/util-utf8" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sso@3.588.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-sso/-/client-sso-3.588.0.tgz#ca03c76b98ede4a862982da1121e6e5ff09a8d98"
-  integrity sha512-zKS+xUkBLfwjbh77ZjtRUoG/vR/fyDteSE6rOAzwlmHQL8p+QUX+zNUNvCInvPi62zGBhEwXOvzs8zvnT4NzfQ==
+"@aws-sdk/client-sso@3.590.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-sso/-/client-sso-3.590.0.tgz#d2950bd4358867153680f4c9f1646602e6fe0349"
+  integrity sha512-6xbC6oQVJKBRTyXyR3C15ksUsPOyW4p+uCj7dlKYWGJvh4vGTV8KhZKS53oPG8t4f1+OMJWjr5wKuXRoaFsmhQ==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
@@ -545,16 +528,16 @@
     "@smithy/util-utf8" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/client-sts@3.588.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/client-sts/-/client-sts-3.588.0.tgz#04b722c7d6119c24f6c5b4410d47aba46dfbe9fd"
-  integrity sha512-UIMjcUikgG9NIENQxSyJNTHMD8TaTfK6Jjf1iuZSyQRyTrcGy0/xcDxrmwZQFAPkOPUf6w9KqydLkMLcYOBdPQ==
+"@aws-sdk/client-sts@3.590.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/client-sts/-/client-sts-3.590.0.tgz#d75c59cf0046274651183f05dac19aedd05c76b1"
+  integrity sha512-f4R1v1LSn4uLYZ5qj4DyL6gp7PXXzJeJsm2seheiJX+53LSF5L7XSDnQVtX1p9Tevv0hp2YUWUTg6QYwIVSuGg==
   dependencies:
     "@aws-crypto/sha256-browser" "3.0.0"
     "@aws-crypto/sha256-js" "3.0.0"
-    "@aws-sdk/client-sso-oidc" "3.588.0"
+    "@aws-sdk/client-sso-oidc" "3.590.0"
     "@aws-sdk/core" "3.588.0"
-    "@aws-sdk/credential-provider-node" "3.588.0"
+    "@aws-sdk/credential-provider-node" "3.590.0"
     "@aws-sdk/middleware-host-header" "3.577.0"
     "@aws-sdk/middleware-logger" "3.577.0"
     "@aws-sdk/middleware-recursion-detection" "3.577.0"
@@ -605,11 +588,11 @@
     tslib "^2.6.2"
 
 "@aws-sdk/credential-provider-cognito-identity@^3.410.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.588.0.tgz#9856774b8f8f0ece253d36b1114a292e134dc19f"
-  integrity sha512-KGwNFx2iKk/cY5T7J6BZ3Cvrrf45MdfKlBx+maNAA4NaX2bjL2BuA4Jvp+rxc2b2BsrKEUZUBdaMsLK+7KLTGQ==
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-cognito-identity/-/credential-provider-cognito-identity-3.590.0.tgz#efc5409817dd1616450c53cd43c16eac915d54bb"
+  integrity sha512-28vRC0BYaDVWU9AzGBywTRmwiwQfkixfOZGcY6e5J6cRjVoawomvHmC2mJd11SjoDcVLUQF+z4Z9z1ZCr1GcpA==
   dependencies:
-    "@aws-sdk/client-cognito-identity" "3.588.0"
+    "@aws-sdk/client-cognito-identity" "3.590.0"
     "@aws-sdk/types" "3.577.0"
     "@smithy/property-provider" "^3.1.0"
     "@smithy/types" "^3.0.0"
@@ -640,15 +623,15 @@
     "@smithy/util-stream" "^3.0.1"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-ini@3.588.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.588.0.tgz#9c809ea172d9b2124ac9cdcdeb517180b6813b73"
-  integrity sha512-tP/YmEKvYpmp7pCR2OuhoOhAOtm6BbZ1hbeG9Sw9RFZi55dbGPHqMmfvvzHFAGsJ20z4/oDS+UnHaWVhRnV82w==
+"@aws-sdk/credential-provider-ini@3.590.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-ini/-/credential-provider-ini-3.590.0.tgz#b49f9f76503c56357fee0c9f0d48e7e0e861061d"
+  integrity sha512-Y5cFciAK38VIvRgZeND7HvFNR32thGtQb8Xop6cMn33FC78uwcRIu9Hc9699XTclCZqz4+Xl1WU+dZ+rnFn2AA==
   dependencies:
     "@aws-sdk/credential-provider-env" "3.587.0"
     "@aws-sdk/credential-provider-http" "3.587.0"
     "@aws-sdk/credential-provider-process" "3.587.0"
-    "@aws-sdk/credential-provider-sso" "3.588.0"
+    "@aws-sdk/credential-provider-sso" "3.590.0"
     "@aws-sdk/credential-provider-web-identity" "3.587.0"
     "@aws-sdk/types" "3.577.0"
     "@smithy/credential-provider-imds" "^3.1.0"
@@ -657,16 +640,16 @@
     "@smithy/types" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-node@3.588.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-node/-/credential-provider-node-3.588.0.tgz#f96496f79f450fbd4e519859a5465e25e7335454"
-  integrity sha512-8s4Ruo6q1YIrj8AZKBiUQG42051ytochDMSqdVOEZGxskfvmt2XALyi5SsWd0Ve3zR95zi+EtRBNPn2EU8sQpA==
+"@aws-sdk/credential-provider-node@3.590.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-node/-/credential-provider-node-3.590.0.tgz#e745d5f5cde0512e9f9ea95b687708948b57a674"
+  integrity sha512-Ky38mNFoXobGrDQ11P3dU1e+q1nRJ7eZl8l15KUpvZCe/hOudbxQi/epQrCazD/gRYV2fTyczdLlZzB5ZZ8DhQ==
   dependencies:
     "@aws-sdk/credential-provider-env" "3.587.0"
     "@aws-sdk/credential-provider-http" "3.587.0"
-    "@aws-sdk/credential-provider-ini" "3.588.0"
+    "@aws-sdk/credential-provider-ini" "3.590.0"
     "@aws-sdk/credential-provider-process" "3.587.0"
-    "@aws-sdk/credential-provider-sso" "3.588.0"
+    "@aws-sdk/credential-provider-sso" "3.590.0"
     "@aws-sdk/credential-provider-web-identity" "3.587.0"
     "@aws-sdk/types" "3.577.0"
     "@smithy/credential-provider-imds" "^3.1.0"
@@ -686,12 +669,12 @@
     "@smithy/types" "^3.0.0"
     tslib "^2.6.2"
 
-"@aws-sdk/credential-provider-sso@3.588.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.588.0.tgz#9f11886a215ec703f927e19ce7406c98d861b85c"
-  integrity sha512-1GstMCyFzenVeppK7hWazMvo3P1DXKP70XkXAjH8H2ELBVg5X8Zt043cnQ7CMt4XjCV+ettHAtc9kz/gJTkDNQ==
+"@aws-sdk/credential-provider-sso@3.590.0":
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/credential-provider-sso/-/credential-provider-sso-3.590.0.tgz#1a90cbec9a48bbc07920b3f5a6d04bba891664ed"
+  integrity sha512-v+0j/I+je9okfwXsgmLppmwIE+TuMp5WqLz7r7PHz9KjzLyKaKTDvfllFD+8oPpBqnmOWiJ9qTGPkrfhB7a/fQ==
   dependencies:
-    "@aws-sdk/client-sso" "3.588.0"
+    "@aws-sdk/client-sso" "3.590.0"
     "@aws-sdk/token-providers" "3.587.0"
     "@aws-sdk/types" "3.577.0"
     "@smithy/property-provider" "^3.1.0"
@@ -710,9 +693,9 @@
     tslib "^2.6.2"
 
 "@aws-sdk/lib-storage@^3.412.0":
-  version "3.588.0"
-  resolved "https://registry.npmjs.org/@aws-sdk/lib-storage/-/lib-storage-3.588.0.tgz#a0a6994f291f90568e9342a134318360538659c0"
-  integrity sha512-NwGw5XWxUnBRdUg08PoNN7XWF+N9lzbCBTRRmxV8FTJnzqiJEYkb4GKv5GeaeeL5Wp4qtMLMwunCxM4rhx2fsg==
+  version "3.590.0"
+  resolved "https://registry.npmjs.org/@aws-sdk/lib-storage/-/lib-storage-3.590.0.tgz#68f6943d042542be9a5abea8c39fe32cdced1ced"
+  integrity sha512-GPR9Kg8N/wM3BCtsj/Bk8k9OIshGMdMmTWgVg+fdLnP5KHH+OMNfvF9aw7JHWjY5c9sM4wKYceBGWNLVSw+lPQ==
   dependencies:
     "@smithy/abort-controller" "^3.0.0"
     "@smithy/middleware-endpoint" "^3.0.1"
@@ -2517,9 +2500,9 @@
     tslib "^2.6.2"
 
 "@smithy/core@^2.1.1":
-  version "2.1.1"
-  resolved "https://registry.npmjs.org/@smithy/core/-/core-2.1.1.tgz#c5e50785f9f61cad85fbefafa402b1a87eff095a"
-  integrity sha512-0vbIwwUcg0FMhTVJgMhbsRSAFL0rwduy/OQz7Xq1pJXJOyaGv+PGjj1iGawRlzBUPA5BkJv7S6q+YU2U8gk/WA==
+  version "2.2.0"
+  resolved "https://registry.npmjs.org/@smithy/core/-/core-2.2.0.tgz#f1b0837b7afa5507a9693c1e93da6ca9808022c1"
+  integrity sha512-ygLZSSKgt9bR8HAxR9mK+U5obvAJBr6zlQuhN5soYWx/amjDoQN4dTkydTypgKe6rIbUjTILyLU+W5XFwXr4kg==
   dependencies:
     "@smithy/middleware-endpoint" "^3.0.1"
     "@smithy/middleware-retry" "^3.0.3"
@@ -3399,28 +3382,6 @@ aelf-bridge@^0.0.10:
     socket.io-client "^2.3.0"
     uuid "^3.3.3"
 
-aelf-design@1.0.0-alpha.17:
-  version "1.0.0-alpha.17"
-  resolved "https://registry.npmjs.org/aelf-design/-/aelf-design-1.0.0-alpha.17.tgz#49ac1f5e84d8bfb0cdc347a27819568a418b9e06"
-  integrity sha512-Kspimme96GB92V0OTJn44Jyfv9nXw1mZKRNWXHooQbD8C9lrgaeB3aMEznCSSGcm+amWDhsBB1Bw/dpXwl7n5Q==
-  dependencies:
-    "@aelf-design/common" "1.0.0-alpha.14"
-    "@aelf-design/icons" "1.0.0-alpha.15"
-    "@ant-design/cssinjs" "^1.18.2"
-    "@aws-sdk/client-cognito-identity" "^3.410.0"
-    "@aws-sdk/client-s3" "^3.410.0"
-    "@aws-sdk/credential-provider-cognito-identity" "^3.410.0"
-    "@aws-sdk/lib-storage" "^3.412.0"
-    "@ctrl/tinycolor" "^4.0.2"
-    ahooks "^3.7.11"
-    antd "^5.12.4"
-    classnames "^2.3.2"
-    copy-to-clipboard "^3.3.3"
-    dayjs "^1.11.10"
-    lodash-es "^4.17.21"
-    rc-slider "^10.5.0"
-    swiper "^11.0.5"
-
 aelf-design@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/aelf-design/-/aelf-design-1.1.0.tgz#59a1504946752721fb13f0c5d78e280e0ab7216e"
@@ -3504,14 +3465,14 @@ ajv@^6.12.4:
     uri-js "^4.2.2"
 
 ajv@^8.11.0:
-  version "8.15.0"
-  resolved "https://registry.npmjs.org/ajv/-/ajv-8.15.0.tgz#d918c661e3e820bbbc65a320e182ee56a1aa978a"
-  integrity sha512-15BTtQUOsSrmHCy+B4VnAiJAJxJ8IFgu6fcjFQF3jQYZ78nLSQthlFg4ehp+NLIyfvFgOlxNsjKIEhydtFPVHQ==
+  version "8.16.0"
+  resolved "https://registry.npmjs.org/ajv/-/ajv-8.16.0.tgz#22e2a92b94f005f7e0f9c9d39652ef0b8f6f0cb4"
+  integrity sha512-F0twR8U1ZU67JIEtekUcLkXkoO5mMMmgGD8sK/xUFzJ805jxHQl92hImFAqqXMyMYjSPOyUPAwHYhB72g5sTXw==
   dependencies:
     fast-deep-equal "^3.1.3"
-    fast-uri "^2.3.0"
     json-schema-traverse "^1.0.0"
     require-from-string "^2.0.2"
+    uri-js "^4.4.1"
 
 ansi-regex@^5.0.1:
   version "5.0.1"
@@ -4799,9 +4760,9 @@ engine.io-parser@~2.2.0:
     has-binary2 "~1.0.2"
 
 enhanced-resolve@^5.12.0:
-  version "5.16.1"
-  resolved "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.16.1.tgz#e8bc63d51b826d6f1cbc0a150ecb5a8b0c62e567"
-  integrity sha512-4U5pNsuDl0EhuZpq46M5xPslstkviJuhrdobaRDBk2Jy2KO37FDAJl4lb2KlNabxT0m4MTK2UHNrsAcphE8nyw==
+  version "5.17.0"
+  resolved "https://registry.npmjs.org/enhanced-resolve/-/enhanced-resolve-5.17.0.tgz#d037603789dd9555b89aaec7eb78845c49089bc5"
+  integrity sha512-dwDPwZL0dmye8Txp2gzFmA6sxALaSvdRDjPH0viLcKrtlOL3tw62nWWweVD1SdILDTJrbrL6tdWVN58Wo6U3eA==
   dependencies:
     graceful-fs "^4.2.4"
     tapable "^2.2.0"
@@ -5257,11 +5218,6 @@ fast-shallow-equal@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fast-shallow-equal/-/fast-shallow-equal-1.0.0.tgz#d4dcaf6472440dcefa6f88b98e3251e27f25628b"
   integrity sha512-HPtaa38cPgWvaCFmRNhlc6NG7pv6NUHqjPgVAkWGoB9mQMwYB27/K0CvOM5Czy+qpT3e8XJ6Q4aPAnzpNpzNaw==
-
-fast-uri@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.npmjs.org/fast-uri/-/fast-uri-2.3.0.tgz#bdae493942483d299e7285dcb4627767d42e2793"
-  integrity sha512-eel5UKGn369gGEWOqBShmFJWfq/xSJvsgDzgLYC845GneayWvXBf0lJCBn5qTABfewy1ZDPoaR5OZCP+kssfuw==
 
 fast-xml-parser@4.2.5:
   version "4.2.5"
@@ -6104,18 +6060,18 @@ jackspeak@^2.3.5:
     "@pkgjs/parseargs" "^0.11.0"
 
 jackspeak@^3.1.2:
-  version "3.2.3"
-  resolved "https://registry.npmjs.org/jackspeak/-/jackspeak-3.2.3.tgz#33e8c44f7858d199fc5684f4ab62d1fd873eb10d"
-  integrity sha512-htOzIMPbpLid/Gq9/zaz9SfExABxqRe1sSCdxntlO/aMD6u0issZQiY25n2GKQUtJ02j7z5sfptlAOMpWWOmvw==
+  version "3.3.0"
+  resolved "https://registry.npmjs.org/jackspeak/-/jackspeak-3.3.0.tgz#65dc7cd87522494fcb2648ec6ca684170e9e1727"
+  integrity sha512-glPiBfKguqA7v8JsXO3iLjJWZ9FV1vNpoI0I9hI9Mnk5yetO9uPLSpiCEmiVijAssv2f54HpvtzvAHfhPieiDQ==
   dependencies:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
 
 jiti@^1.19.1, jiti@^1.21.0:
-  version "1.21.0"
-  resolved "https://registry.npmjs.org/jiti/-/jiti-1.21.0.tgz#7c97f8fe045724e136a397f7340475244156105d"
-  integrity sha512-gFqAIbuKyyso/3G2qhiO2OM6shY6EPP/R0+mkDbyspxKazh8BXDC5FiFsUjlczgdNz/vfra0da2y+aHrusLG/Q==
+  version "1.21.1"
+  resolved "https://registry.npmjs.org/jiti/-/jiti-1.21.1.tgz#84639a2debaececa42fcb2a313b5b80716c894ab"
+  integrity sha512-KMXpzEJMsOFyRj6ZpDTnnlJrdr9umUY+eut5vlRvjVixohitnRFIRTFw9MEu9zPlBxTHZo6xD5ftKYiQZuJYQw==
 
 js-cookie@^2.2.1, js-cookie@^2.x.x:
   version "2.2.1"
@@ -7545,9 +7501,9 @@ rc-mentions@~1.13.1:
     rc-util "^5.22.5"
 
 rc-mentions@~2.13.1:
-  version "2.13.1"
-  resolved "https://registry.npmjs.org/rc-mentions/-/rc-mentions-2.13.1.tgz#14586ffa4a1ddd4079564f38abf2b4351671feca"
-  integrity sha512-DSyUDq/PPCleUX1eghIn371lTSRQsIuCs1N7xR9nZcHP9R1NkE7JjpWUP8Gy4EGVPu0JN0qIcokxYJaoGPnofg==
+  version "2.13.2"
+  resolved "https://registry.npmjs.org/rc-mentions/-/rc-mentions-2.13.2.tgz#6f7ce0a5ff722880f83c588cf2a4242e424d18b3"
+  integrity sha512-gJCF6MDax/2wl2CzvJEN9yyQKYDzGKA2hmmymQiEPiYUNUOk6UKvQFSB3TBfAi57vxntPMJZGfxNtda1BDb4kA==
   dependencies:
     "@babel/runtime" "^7.22.5"
     "@rc-component/trigger" "^2.0.0"
@@ -8560,7 +8516,6 @@ string-convert@^0.2.0:
   integrity sha512-u/1tdPl4yQnPBjnVrmdLo9gtuLvELKsAoRapekWggdiQNvvvum+jYF329d84NAa660KQw7pB2n36KrIKVoXa3A==
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0, string-width@^4.2.0, string-width@^4.2.3:
-  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.npmjs.org/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
@@ -8933,9 +8888,9 @@ tslib@^1.11.1:
   integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
 
 tslib@^2.1.0, tslib@^2.3.0, tslib@^2.3.1, tslib@^2.4.0, tslib@^2.4.1, tslib@^2.5.0, tslib@^2.6.2:
-  version "2.6.2"
-  resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.2.tgz#703ac29425e7b37cd6fd456e92404d46d1f3e4ae"
-  integrity sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==
+  version "2.6.3"
+  resolved "https://registry.npmjs.org/tslib/-/tslib-2.6.3.tgz#0438f810ad7a9edcde7a241c3d80db693c8cbfe0"
+  integrity sha512-xNvxJEOUiWPGhUuUdQgAJPKOOJfGnIyKySOc09XkKsgdUV/3E2zvwZYdejjmRgPCgcym1juLH3226yA7sEFJKQ==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"
@@ -9046,7 +9001,7 @@ update-browserslist-db@^1.0.13:
     escalade "^3.1.2"
     picocolors "^1.0.1"
 
-uri-js@^4.2.2:
+uri-js@^4.2.2, uri-js@^4.4.1:
   version "4.4.1"
   resolved "https://registry.npmjs.org/uri-js/-/uri-js-4.4.1.tgz#9b1a52595225859e55f669d928f88c6c57f2a77e"
   integrity sha512-7rKUyy33Q1yc98pQ1DAmLtwX109F7TIfWlW1Ydo8Wl1ii1SeHieeh0HHfPeL2fMXK6z0s8ecKs9frCuLJvndBg==

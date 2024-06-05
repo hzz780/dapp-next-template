@@ -5,13 +5,20 @@
  */
 'use client';
 import { usePathname, useSearchParams } from 'next/navigation';
+import { Spin } from 'antd';
 import { Suspense } from 'react'
 
-export default function NavLinks() {
+function SearchParams() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
-  return <Suspense>
+  return <>
     <p>path: {pathname}</p>
     <p>searchParams: {searchParams}</p>
+  </>
+}
+
+export default function NavLinks() {
+  return <Suspense fallback={<Spin />}>
+    <SearchParams />
   </Suspense>
 }
