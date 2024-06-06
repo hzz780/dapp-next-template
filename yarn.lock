@@ -40,6 +40,11 @@
     antd-style "^3.5.2"
     classnames "^2.3.2"
 
+"@aelf-design/nextjs-registry@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.npmjs.org/@aelf-design/nextjs-registry/-/nextjs-registry-1.1.1.tgz#36a7ace79c8bf4828d6929fee2a47a3f879bba9f"
+  integrity sha512-fp7DWeosR8A3k+3NMHXRu5VNqfnc/L7ZzBxA5NieHq0lsqjb+lD+11GTBJ3qNey6T0h8N+xK8i7bKJ1crNtbWQ==
+
 "@aelf-web-login/wallet-adapter-base@0.0.2-alpha.9", "@aelf-web-login/wallet-adapter-base@^0.0.2-alpha.8":
   version "0.0.2-alpha.9"
   resolved "https://registry.npmjs.org/@aelf-web-login/wallet-adapter-base/-/wallet-adapter-base-0.0.2-alpha.9.tgz#29006a4a389d63f68ce58a1d8511fbb2e9d2c072"
@@ -2193,7 +2198,7 @@
     "@react-spring/shared" "~9.6.1"
     "@react-spring/types" "~9.6.1"
 
-"@reduxjs/toolkit@^2.2.3":
+"@reduxjs/toolkit@^2.2.3", "@reduxjs/toolkit@^2.2.5":
   version "2.2.5"
   resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-2.2.5.tgz#c0d2d8482ef80722bebe015ff05b06c34bfb6e0d"
   integrity sha512-aeFA/s5NCG7NoJe/MhmwREJxRkDs0ZaSqt0MxhWUrwCf1UQXpwR87RROJEql0uAkLI6U7snBOYOcKw83ew3FPg==
@@ -3231,6 +3236,11 @@
   version "1.0.5"
   resolved "https://registry.npmjs.org/@types/shimmer/-/shimmer-1.0.5.tgz#491d8984d4510e550bfeb02d518791d7f59d2b88"
   integrity sha512-9Hp0ObzwwO57DpLFF0InUjUm/II8GmKAvzbefxQTihCb7KI6yc9yzf0nLc4mVdby5N4DRCgQM2wCup9KTieeww==
+
+"@types/use-sync-external-store@^0.0.3":
+  version "0.0.3"
+  resolved "https://registry.npmjs.org/@types/use-sync-external-store/-/use-sync-external-store-0.0.3.tgz#b6725d5f4af24ace33b36fafd295136e75509f43"
+  integrity sha512-EwmlvuaxPNej9+T4v5AuBPJa2x2UOJVdjCtDHgcDqitUeOtjnJKJ+apYjVcAoBEMjKW1VVFGZLUb5+qqa09XFA==
 
 "@typescript-eslint/parser@^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0":
   version "7.2.0"
@@ -7985,6 +7995,14 @@ react-qrcode-logo@2.9.0:
     lodash.isequal "^4.5.0"
     qrcode-generator "^1.4.1"
 
+react-redux@^9.1.2:
+  version "9.1.2"
+  resolved "https://registry.npmjs.org/react-redux/-/react-redux-9.1.2.tgz#deba38c64c3403e9abd0c3fbeab69ffd9d8a7e4b"
+  integrity sha512-0OA4dhM1W48l3uzmv6B7TXPCGmokUU4p1M44DGN2/D9a1FjVPukVjER1PcPX97jIg6aUeLq1XJo1IpfbgULn0w==
+  dependencies:
+    "@types/use-sync-external-store" "^0.0.3"
+    use-sync-external-store "^1.0.0"
+
 react-universal-interface@^0.6.2:
   version "0.6.2"
   resolved "https://registry.npmjs.org/react-universal-interface/-/react-universal-interface-0.6.2.tgz#5e8d438a01729a4dbbcbeeceb0b86be146fe2b3b"
@@ -9021,7 +9039,7 @@ use-merge-value@^1.2.0:
   resolved "https://registry.npmjs.org/use-merge-value/-/use-merge-value-1.2.0.tgz#45410846c23e490f404c9cbd17d67db9c8c0efcd"
   integrity sha512-DXgG0kkgJN45TcyoXL49vJnn55LehnrmoHc7MbKi+QDBvr8dsesqws8UlyIWGHMR+JXgxc1nvY+jDGMlycsUcw==
 
-use-sync-external-store@^1.2.0:
+use-sync-external-store@^1.0.0, use-sync-external-store@^1.2.0:
   version "1.2.2"
   resolved "https://registry.npmjs.org/use-sync-external-store/-/use-sync-external-store-1.2.2.tgz#c3b6390f3a30eba13200d2302dcdf1e7b57b2ef9"
   integrity sha512-PElTlVMwpblvbNqQ82d2n6RjStvdSoNe9FG28kNfz3WiXilJm4DdNkEzRhCZuIDwY8U08WVihhGR5iRqAwfDiw==
