@@ -31,6 +31,7 @@ export default function HelloLayout({
         <SideBarItem><Link href="/demos/aelf-web3/sdk">aelf-web3 sdk</Link></SideBarItem>
         <SideBarItem><Link href="/demos/aelf-design">aelf-design</Link></SideBarItem>
         <SideBarItem><Link href="/demos/redux">Redux Toolkit</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/file-upload">file-upload</Link></SideBarItem>
         <div>
           <p>Show link path here</p>
           <NavLinks />
