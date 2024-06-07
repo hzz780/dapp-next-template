@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import NavLinks from '@/app/ui/demos/nav-links/page';
+import {NickNameItem} from '@/app/demos/redux/nickName/NickNameitem';
 
 function SideBarItem ({
   children, // will be a page or nested layout
@@ -29,10 +30,13 @@ export default function HelloLayout({
         <SideBarItem><Link href="/demos/sentry">sentry</Link></SideBarItem>
         <SideBarItem><Link href="/demos/aelf-web3/sdk">aelf-web3 sdk</Link></SideBarItem>
         <SideBarItem><Link href="/demos/aelf-design">aelf-design</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/redux">Redux Toolkit</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/file-upload">file-upload</Link></SideBarItem>
         <div>
           <p>Show link path here</p>
           <NavLinks />
         </div>
+        <NickNameItem/>
       </div>
       <div className="flex-initial w-5/6">{children}</div>
     </section>
