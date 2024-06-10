@@ -5,7 +5,7 @@ const { Blob } = require('buffer');
 
 export async function POST(request: Request) {
   const formData = await request.formData();
-  console.log('初始的formData blob: ', formData);
+  console.log('formData blob: ', formData);
 
   const file = formData.get("Code") as any;
   const manifest = formData.get("Manifest") as any;
@@ -13,7 +13,7 @@ export async function POST(request: Request) {
   console.log('manifest: ', manifest);
 
   const fileBuffer = await file.arrayBuffer();
-  console.log('arrayBuffer, Buffer.from(这个arrayBuffer): ', __dirname, Buffer.from(fileBuffer));
+  console.log('arrayBuffer, Buffer.from(arrayBuffer): ', __dirname, Buffer.from(fileBuffer));
   await writeFile(`${__dirname}/${manifest}`, Buffer.from(fileBuffer));
 
   return new NextResponse("success", { status: 200 });

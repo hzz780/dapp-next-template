@@ -6,6 +6,9 @@ const uploadFileBlob = async(Code: any) => {
   const CodeBlob = new Blob([Code], { type: Code.type });
   formData.append('Manifest', "blobFile.dll");
   formData.append('Code', CodeBlob);
+  // formData.append('Code', Code.originFileObj);
+  console.log('Code', Code);
+  // console.log('Code originFileObj', Code.originFileObj);
 
   console.log(formData);
 
@@ -24,6 +27,7 @@ const uploadFileBlob = async(Code: any) => {
 const uploadFile = async (file: any) => {
   const formData = new FormData();
   formData.append("file", file);
+  // formData.append("file", file.ori);
 
   const response = await fetch("/api/demos/file-upload", {
     method: "POST",
