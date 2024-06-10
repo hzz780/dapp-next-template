@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import NavLinks from '@/app/ui/demos/nav-links/page';
-import {NickNameItem} from '@/app/demos/redux/nickName/NickNameitem';
+import {NickNameItem} from '@/app/demos/redux/nickName/NickNameItem';
+import {WalletConnectItem} from '@/app/demos/redux/walletConnect/WalletConnectItem';
 
 function SideBarItem ({
   children, // will be a page or nested layout
@@ -18,7 +19,7 @@ export default function HelloLayout({
   children: React.ReactNode
 }) {
   return (
-    <section className="flex min-h-screen min-w-full">
+    <section className="flex min-h-screen min-w-full break-all">
       {/* Include shared UI here e.g. a header or sidebar */}
       {/*<nav></nav>*/}
       <div className="hidden md:flex flex-col w-1/6 bg-indigo-300">
@@ -32,11 +33,13 @@ export default function HelloLayout({
         <SideBarItem><Link href="/demos/aelf-design">aelf-design</Link></SideBarItem>
         <SideBarItem><Link href="/demos/redux">Redux Toolkit</Link></SideBarItem>
         <SideBarItem><Link href="/demos/file-upload">file-upload</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/web-login">web login</Link></SideBarItem>
         <div>
           <p>Show link path here</p>
           <NavLinks />
         </div>
         <NickNameItem/>
+        <WalletConnectItem/>
       </div>
       <div className="flex-initial w-5/6">{children}</div>
     </section>
