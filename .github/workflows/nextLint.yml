@@ -1,5 +1,4 @@
-name: Next Lint Check
-#
+name: Next Lint
 
 on: [push, pull_request]
 
