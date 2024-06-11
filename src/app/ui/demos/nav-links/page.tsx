@@ -6,14 +6,16 @@
 'use client';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { Spin } from 'antd';
-import { Suspense } from 'react'
+import {Suspense} from 'react'
+import Link from 'next/link';
 
 function SearchParams() {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   return <>
+    <Link href="/demos?id=2024">Click Me</Link>
     <p>path: {pathname}</p>
-    <p>searchParams: {searchParams}</p>
+    <p>searchParams: {searchParams.get('id')}</p>
   </>
 }
 
