@@ -1,6 +1,5 @@
 'use client'
-import { WebLoginProvider, init, useConnectWallet } from '@aelf-web-login/wallet-adapter-react';
-import { walletConnectConfig } from '@/app/lib/walletConnectConfig';
+import { useConnectWallet } from '@aelf-web-login/wallet-adapter-react';
 import { Button } from 'aelf-design';
 import { TWalletInfo } from '@aelf-web-login/wallet-adapter-base';
 import {useState} from 'react';
@@ -10,11 +9,11 @@ import {
   getWalletInfo,
   setWalletInfo
 } from '@/app/lib/reduxToolkit/features/walletConnect/walletConnectSlice';
+import WebLoginProvider from './providers';
 
 export default function Page() {
-  const bridgeAPI = init(walletConnectConfig); // upper config
   return (
-    <WebLoginProvider bridgeAPI={bridgeAPI}>
+    <WebLoginProvider>
       <div><WalletConnect /></div>
       <div><WalletConnectWithRTK /></div>
     </WebLoginProvider>
@@ -28,7 +27,7 @@ const WalletConnect = () => {
   const onConnectBtnClickHandler = async() => {
     try {
       const rs = await connectWallet();
-      setWalletConnected(rs);
+      setWalletConnected(formatWalletInfo(rs));
       console.log('rs: ', rs);
     } catch (e: any) {
       console.log(e.message)
@@ -55,7 +54,7 @@ const WalletConnectWithRTK = () => {
   const onConnectBtnClickHandler = async() => {
     try {
       const rs = await connectWallet();
-      dispatch(setWalletInfo(rs))
+      dispatch(setWalletInfo(formatWalletInfo(rs)))
       console.log('walletConnected rs: ', rs);
     } catch (e: any) {
       console.log(e.message)
@@ -76,4 +75,17 @@ const WalletConnectWithRTK = () => {
     <div>Account name: {walletConnected?.address}</div>
     <div>walletInfo: {JSON.stringify(walletInfo)}</div>
   </>
+}
+
+/**
+ * @description
+ * If we do not format the data, we will get the error follow.
+ * RTK: A non-serializable value was detected in an action;
+ * @param walletInfo
+ */
+function formatWalletInfo (walletInfo: TWalletInfo) {
+  return {
+    name: walletInfo?.name || '-',
+    address: walletInfo?.address || '-'
+  }
 }

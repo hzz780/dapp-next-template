@@ -2,9 +2,7 @@ import { PortkeyDiscoverWallet } from '@aelf-web-login/wallet-adapter-portkey-di
 import { PortkeyAAWallet } from '@aelf-web-login/wallet-adapter-portkey-aa';
 import { NightElfWallet } from '@aelf-web-login/wallet-adapter-night-elf';
 import { IConfigProps } from '@aelf-web-login/wallet-adapter-bridge';
-import { TChainId } from '@aelf-web-login/wallet-adapter-base';
-
-// type networkType = 'MAINNET' | 'TESTNET';
+import {TChainId} from '@aelf-web-login/wallet-adapter-base';
 
 const APP_NAME = 'explorer.aelf.io';
 const WEBSITE_ICON = 'https://explorer.aelf.io/favicon.main.ico';
@@ -76,10 +74,11 @@ const wallets = [
       },
     },
   }),
-]
+];
 
 export const walletConnectConfig = {
   didConfig,
   baseConfig,
   wallets
 } as IConfigProps;
+
