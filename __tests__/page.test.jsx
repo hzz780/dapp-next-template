@@ -14,11 +14,12 @@ describe('JestDemo', () => {
 
     expect(hello).toBeInTheDocument();
   });
-  it('renders hello error', () => {
-    render(<Page />)
-
-    const helloError = screen.getByText('Hello Jest Error');
-
-    expect(helloError).toBeInTheDocument();
-  });
+  // This case will fail. You can try your own.
+  // it('renders hello error', () => {
+  //   render(<Page />)
+  //
+  //   const helloError = screen.getByText('Hello Jest Error');
+  //
+  //   expect(helloError).toBeInTheDocument();
+  // });
 })
