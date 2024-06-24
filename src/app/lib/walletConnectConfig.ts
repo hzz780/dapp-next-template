@@ -2,12 +2,12 @@ import { PortkeyDiscoverWallet } from '@aelf-web-login/wallet-adapter-portkey-di
 import { PortkeyAAWallet } from '@aelf-web-login/wallet-adapter-portkey-aa';
 import { NightElfWallet } from '@aelf-web-login/wallet-adapter-night-elf';
 import { IConfigProps } from '@aelf-web-login/wallet-adapter-bridge';
-import {TChainId} from '@aelf-web-login/wallet-adapter-base';
+import { TChainId, SignInDesignEnum, NetworkEnum } from '@aelf-web-login/wallet-adapter-base';
 
 const APP_NAME = 'explorer.aelf.io';
 const WEBSITE_ICON = 'https://explorer.aelf.io/favicon.main.ico';
 const CHAIN_ID = 'AELF' as TChainId;
-const NETWORK_TYPE = 'TESTNET';
+const NETWORK_TYPE = NetworkEnum.TESTNET;
 const RPC_SERVER_AELF = 'https://explorer-test.aelf.io/chain';
 const RPC_SERVER_TDVV = 'https://explorer-test-side02.aelf.io/chain';
 const RPC_SERVER_TDVW = 'https://explorer-test-side02.aelf.io/chain';
@@ -34,10 +34,10 @@ const baseConfig = {
   chainId: CHAIN_ID,
   keyboard: true,
   noCommonBaseModal: false,
-  design: 'CryptoDesign', // "SocialDesign" | "CryptoDesign" | "Web2Design"
+  design: SignInDesignEnum.CryptoDesign, // "SocialDesign" | "CryptoDesign" | "Web2Design"
   titleForSocialDesign: 'Crypto wallet',
   iconSrcForSocialDesign: 'url or base64',
-}
+};
 
 const wallets = [
   new PortkeyAAWallet({
@@ -76,9 +76,8 @@ const wallets = [
   }),
 ];
 
-export const walletConnectConfig = {
+export const walletConnectConfig: IConfigProps = {
   didConfig,
   baseConfig,
   wallets
-} as IConfigProps;
-
+};
