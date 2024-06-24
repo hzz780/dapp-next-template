@@ -13,4 +13,7 @@ Sentry.init({
 
   // Setting this option to true will print useful information to the console while you're setting up Sentry.
   debug: false,
+
+  // Make sure to set this to disable the automatic OpenTelemetry setup
+  skipOpenTelemetrySetup: true,
 });

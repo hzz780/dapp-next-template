@@ -35,6 +35,7 @@ export default function HelloLayout({
         <SideBarItem><Link href="/demos/file-upload">file-upload</Link></SideBarItem>
         <SideBarItem><Link href="/demos/web-login">web login</Link></SideBarItem>
         <SideBarItem><Link href="/demos/jest">jest</Link></SideBarItem>
+        <SideBarItem><Link href="/demos/opentelemetry">opentelemetry</Link></SideBarItem>
         <div>
           <p>Show link path here</p>
           <NavLinks />
