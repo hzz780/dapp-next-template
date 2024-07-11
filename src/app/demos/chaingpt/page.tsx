@@ -25,8 +25,9 @@ const defaultList: IChatItem[] =  [{"text":"the current price of ELF","type":"qu
 export default function Page() {
   const [chatList, setChainList] = useState<IChatItem[]>(defaultList);
   const [searchDisable, setSearchDisable] = useState(false);
+  const [searchInput, setSearchInput] = useState('');
 
-  const onSearch = (value: string) => {
+  const onSearch = async (value: string) => {
     console.log('value: ', value);
     if (value.trim().length <= 0) {
       return;
@@ -39,36 +40,36 @@ export default function Page() {
     setChainList(_list);
     setSearchDisable(true);
 
-    const askChainGPT = async (question: string, callback: Function) => {
+    const askChainGPT = async (question: string) => {
       const url = '/api/demos/chaingpt';
       let data;
-      try {
-        const response = await fetch(url, {
-          method: "POST",
-          body: JSON.stringify({ question }),
-        });
-        if (!response.ok) {
-          throw new Error(`Response status: ${response.status}`);
-        }
 
-        const json = await response.json();
-        console.log(json);
-        data = json.data;
-      } catch (error) {
-        console.error(error);
-        data = error instanceof Error ? error.message : 'Please try again';
+      const response = await fetch(url, {
+        method: "POST",
+        body: JSON.stringify({ question }),
+      });
+      if (!response.ok) {
+        throw new Error(`Response status: ${response.status}`);
       }
-      const answer: IChatItem = {
-        text: data,
-        type: 'answer'
-      };
-      callback([..._list, answer]);
+
+      const json = await response.json();
+      console.log(json);
+      data = json.data;
+      return data;
     };
-    askChainGPT(value, (list: IChatItem[]) => {
-      console.log('list', list);
-      setChainList(list);
-      setSearchDisable(false);
-    });
+    let answerMessage;
+    try {
+      answerMessage = await askChainGPT(value);
+      setSearchInput('');
+    } catch (error) {
+      answerMessage = error instanceof Error ? error.message : 'Please try again';
+    }
+    const answer: IChatItem = {
+      text: answerMessage,
+      type: 'answer'
+    };
+    setChainList([..._list, answer]);
+    setSearchDisable(false);
   };
 
   console.log('chatList', chatList, JSON.stringify(chatList));
@@ -80,19 +81,18 @@ export default function Page() {
   }, [chatList]);
 
   return <>
-    {/*<div className="w-full h-svh border border-b-gray-300 lg:pb-36 pb-24 bg-white">*/}
     <div className="w-full h-full flex flex-col bg-white">
       <div className="w-full h-full overflow-hidden">
         <div className="w-full h-full flex-1 overflow-scroll">
           <div className="w-full p-4 whitespace-pre-wrap break-normal text-wrap">
-            <QuestionBox>Hello World</QuestionBox>
-            <AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.
-              The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>
-            <QuestionBox>Hello World 2331111</QuestionBox>
-            <QuestionBox>Hello World</QuestionBox>
-            <AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.
-              The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>
-            <QuestionBox>Hello World 2331111</QuestionBox>
+            {/*<QuestionBox>Hello World</QuestionBox>*/}
+            {/*<AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.*/}
+            {/*  The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>*/}
+            {/*<QuestionBox>Hello World 2331111</QuestionBox>*/}
+            {/*<QuestionBox>Hello World</QuestionBox>*/}
+            {/*<AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.*/}
+            {/*  The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>*/}
+            {/*<QuestionBox>Hello World 2331111</QuestionBox>*/}
             {chatList.map((item, index) => (
               <div key={index}>
                 {item.type === 'question' ? <QuestionBox>{item.text}</QuestionBox> : <AnswerBox>{item.text}</AnswerBox>}
@@ -101,7 +101,6 @@ export default function Page() {
             <AnswerBox className={searchDisable ? 'block' : 'hidden'}><Spin spinning={searchDisable}/></AnswerBox>
             <div ref={bottomRef}></div>
           </div>
-
         </div>
       </div>
       <div className="p-4">
@@ -109,6 +108,8 @@ export default function Page() {
           allowClear
           disabled={searchDisable}
           loading={searchDisable}
+          value={searchInput}
+          onChange={(e) => setSearchInput(e.target.value)}
           onSearch={onSearch}
           placeholder="Please input your question" />
       </div>
