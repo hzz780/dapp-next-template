@@ -5,7 +5,7 @@ import { setTimeout } from 'node:timers/promises'
 
 console.log('CHAINGPT_API_KEY: ',  process.env.CHAINGPT_API_KEY);
 const generalchat = new GeneralChat({
-  apiKey: process.env.CHAINGPT_API_KEY as string, // '7d286581-cfbd-4cc3-95a2-f42a08b1c609',
+  apiKey: process.env.CHAINGPT_API_KEY as string,
 });
 
 interface Context {
