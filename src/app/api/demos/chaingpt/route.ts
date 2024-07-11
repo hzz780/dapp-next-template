@@ -45,7 +45,7 @@ export async function POST(request: NextRequest, context: Context) {
   try {
     // const data = await chainGPTChat(question);
     await setTimeout(1000);
-    const data = '你好 你好';
+    const data = 'hello world';
     return NextResponse.json({ code: 0, data });
   } catch (error) {
     return NextResponse.json({ code: -1, error: error });

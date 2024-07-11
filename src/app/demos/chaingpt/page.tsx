@@ -18,7 +18,7 @@ interface IChatItem {
   type: 'question' | 'answer';
 }
 
-const defaultList: IChatItem[] =  [{"text":"the current price of ELF","type":"question"},{"text":"The current price of ELF (aelf) is $0.3994312670003399. Please note that cryptocurrency prices are highly volatile and can change rapidly. It's always a good idea to check the latest prices on a reliable cryptocurrency exchange or market data platform. Let me know if there's anything else I can help you with!","type":"answer"},{"text":"aelf是一个什么样的项目呢？","type":"question"},{"text":"aelf是一个基于区块链技术的项目，旨在构建一个面向Web3应用的云原生、高性能的区块链系统。它支持DeFi和元宇宙应用，并提供安全、快速和高效的环境。aelf采用多层侧链架构，以增强可扩展性和性能，使主链处理通用功能，而侧链支持特定应用。它使用委托权益证明（DPoS）共识机制，通过投票选出维护区块链的代表。aelf支持在隔离环境中使用C#智能合约，以实现安全和稳定性。其治理模型允许代币持有者参与决策，满足供应链管理和金融等领域的企业需求。aelf积极发展其生态系统，并与合作伙伴建立伙伴关系，以增强功能和扩展能力。\n\naelf的核心和实现遵循领域驱动设计（DDD）原则和最佳编程实践，特别是与C#和面向对象编程原则（如SOLID和DRY）一致的原则。它使用C#在dotnet core框架上开发，以实现高性能和跨平台支持。aelf使用ABP框架来处理区块链节点，使用XUnit进行单元测试，并使用自定义框架进行智能合约测试。它使用gRPC和Protobuf进行跨链和P2P通信，操作系统层处理高级网络事件和RPC实现，内核管理智能合约执行和数据访问，并支持侧链模块的插件。aelf的智能合约开发主要使用C#，同时还支持JavaScript、Java、Go和Lua等其他语言。开发人员可以通过适应gRPC的桥接通信来创建其他语言的SDK和运行时。","type":"answer"}];
+const defaultList: IChatItem[] =  [{"text":"the current price of ELF","type":"question"},{"text":"The current price of ELF (aelf) is $0.3994312670003399. Please note that cryptocurrency prices are highly volatile and can change rapidly. It's always a good idea to check the latest prices on a reliable cryptocurrency exchange or market data platform. Let me know if there's anything else I can help you with!","type":"answer"}];
 
 // TODO: Virtual list to hold the messages
 // import VirtualList from 'rc-virtual-list';
