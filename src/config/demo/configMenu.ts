@@ -53,4 +53,8 @@ export const menuList: IMenuItemData[] = [
     label: 'ChainGPT',
     href: '/demos/chaingpt',
   },
+  {
+    label: 'socket',
+    href: '/demos/socket',
+  },
 ];
