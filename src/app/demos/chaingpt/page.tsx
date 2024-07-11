@@ -7,11 +7,11 @@
  * and inject antd's first-screen styles into HTML to avoid page flicker.
  * https://ant.design/docs/react/use-with-next
  **/
-import { Input } from 'antd';
+import { Input, Spin } from 'antd';
 const { Search } = Input;
 import { QuestionBox } from '@/app/demos/chaingpt/components/QuestionBox';
 import { AnswerBox } from '@/app/demos/chaingpt/components/AnswerBox';
-import {useState} from 'react';
+import {useEffect, useRef, useState} from 'react';
 
 interface IChatItem {
   text: string;
@@ -72,23 +72,34 @@ export default function Page() {
   };
 
   console.log('chatList', chatList, JSON.stringify(chatList));
+  const bottomRef = useRef<null | HTMLDivElement>(null);
+  useEffect(() => {
+    if (bottomRef.current) {
+      bottomRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [chatList]);
 
   return <>
     {/*<div className="w-full h-svh border border-b-gray-300 lg:pb-36 pb-24 bg-white">*/}
     <div className="w-full h-full flex flex-col bg-white">
       <div className="w-full h-full overflow-hidden">
-        <div className="w-full h-full flex-1 lg:pb-36 pb-24 overflow-scroll">
-          {/*<div className="w-full lg:h-5/6 h-svh overflow-scroll p-4 bg-white">*/}
-          <div className="w-full h-full p-4 whitespace-pre-wrap break-normal text-wrap">
-            {/*<QuestionBox>Hello World</QuestionBox>*/}
-            {/*<AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.*/}
-            {/*  The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>*/}
-            {/*<QuestionBox>Hello World 2331111</QuestionBox>*/}
+        <div className="w-full h-full flex-1 overflow-scroll">
+          <div className="w-full p-4 whitespace-pre-wrap break-normal text-wrap">
+            <QuestionBox>Hello World</QuestionBox>
+            <AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.
+              The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>
+            <QuestionBox>Hello World 2331111</QuestionBox>
+            <QuestionBox>Hello World</QuestionBox>
+            <AnswerBox>Hello World hzz! aelf addresses interoperability with other blockchain networks through its multi-chain architecture and cross-chain communication protocols.
+              The aelf blockchain is designed to support seamless communication and data exchange between different blockchains. It achieves this by implementing a main chain and multiple side chains. The main chain handles general functions and acts as a bridge between the side chains. Each side chain is dedicated to specific applications or business scenarios, allowing for better scalability and performance.</AnswerBox>
+            <QuestionBox>Hello World 2331111</QuestionBox>
             {chatList.map((item, index) => (
               <div key={index}>
                 {item.type === 'question' ? <QuestionBox>{item.text}</QuestionBox> : <AnswerBox>{item.text}</AnswerBox>}
               </div>
             ))}
+            <AnswerBox className={searchDisable ? 'block' : 'hidden'}><Spin spinning={searchDisable}/></AnswerBox>
+            <div ref={bottomRef}></div>
           </div>
 
         </div>
