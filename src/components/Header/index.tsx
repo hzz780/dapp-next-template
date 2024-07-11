@@ -14,7 +14,8 @@ const MENU_ITEMS: IMenuItem[] = [
 
 export default function Header() {
   return (
-    <section className="sticky top-0 left-0 z-[100] flex-shrink-0 px-4 lg:px-10 bg-white border-b-1 border-b-gray-300">
+    // <section className="sticky top-0 left-0 z-[100] flex-shrink-0 px-4 lg:px-10 bg-white border-b-1 border-b-gray-300">
+    <section className="fixed w-full top-0 left-0 z-[100] flex-shrink-0 px-4 lg:px-10 bg-white border-b-1 border-b-gray-300">
       <div className="h-[60px] lg:h-[80px] mx-auto flex justify-between items-center w-full">
         <Link href="/" className="flex flex-1 overflow-hidden justify-start items-center">
           <Image

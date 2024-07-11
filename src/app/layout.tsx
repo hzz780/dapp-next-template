@@ -6,7 +6,7 @@ import "./ui/globals.css";
 import { inter } from '@/app/ui/fonts';
 import {StoreProvider} from './StoreProvider';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+// import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,7 +26,7 @@ export default function RootLayout({
             <AelfdRegistry>
               <Header />
               {children}
-              <Footer />
+              {/*<Footer />*/}
             </AelfdRegistry>
           </AntdRegistry>
         </body>
