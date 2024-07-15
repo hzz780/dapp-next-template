@@ -57,4 +57,8 @@ export const menuList: IMenuItemData[] = [
     label: 'socket',
     href: '/demos/socket',
   },
+  {
+    label: 'Graphql',
+    href: '/demos/graphql/server',
+  },
 ];

@@ -231,6 +231,26 @@
     resize-observer-polyfill "^1.5.1"
     throttle-debounce "^5.0.0"
 
+"@apollo/client@^3.10.8":
+  version "3.10.8"
+  resolved "https://registry.npmjs.org/@apollo/client/-/client-3.10.8.tgz#96b1548818e45fac752ec2bd318e5466d9ca26b5"
+  integrity sha512-UaaFEitRrPRWV836wY2L7bd3HRCfbMie1jlYMcmazFAK23MVhz/Uq7VG1nwbotPb5xzFsw5RF4Wnp2G3dWPM3g==
+  dependencies:
+    "@graphql-typed-document-node/core" "^3.1.1"
+    "@wry/caches" "^1.0.0"
+    "@wry/equality" "^0.5.6"
+    "@wry/trie" "^0.5.0"
+    graphql-tag "^2.12.6"
+    hoist-non-react-statics "^3.3.2"
+    optimism "^0.18.0"
+    prop-types "^15.7.2"
+    rehackt "^0.1.0"
+    response-iterator "^0.2.6"
+    symbol-observable "^4.0.0"
+    ts-invariant "^0.10.3"
+    tslib "^2.3.0"
+    zen-observable-ts "^1.2.5"
+
 "@apollo/client@^3.7.3":
   version "3.10.4"
   resolved "https://registry.npmjs.org/@apollo/client/-/client-3.10.4.tgz#1abc488c79cf37dc63edf041aee6f9dc5aabc692"
@@ -6476,6 +6496,11 @@ graphql@^16.6.0:
   version "16.8.1"
   resolved "https://registry.npmjs.org/graphql/-/graphql-16.8.1.tgz#1930a965bef1170603702acdb68aedd3f3cf6f07"
   integrity sha512-59LZHPdGZVh695Ud9lRzPBVTtlX9ZCV150Er2W43ro37wVof0ctenSaskPPjN7lVTIN8mSZt8PHUNKZuNQUuxw==
+
+graphql@^16.9.0:
+  version "16.9.0"
+  resolved "https://registry.npmjs.org/graphql/-/graphql-16.9.0.tgz#1c310e63f16a49ce1fbb230bd0a000e99f6f115f"
+  integrity sha512-GGTKBX4SD7Wdb8mqeDLni2oaRGYQWjWHGKPQ24ZMnUtKfcsVoiv4uX8+LJr1K6U5VW2Lu1BwJnj7uiori0YtRw==
 
 has-bigints@^1.0.1, has-bigints@^1.0.2:
   version "1.0.2"

@@ -43,9 +43,9 @@ export async function POST(request: NextRequest, context: Context) {
   const { question = '' } = body;
   console.log('process.env.CHAINGPT_API_KEY', process.env.CHAINGPT_API_KEY);
   try {
-    // const data = await chainGPTChat(question);
-    await setTimeout(1000);
-    const data = 'hello world';
+    const data = await chainGPTChat(question);
+    // await setTimeout(1000);
+    // const data = 'hello world';
     return NextResponse.json({ code: 0, data });
   } catch (error) {
     return NextResponse.json({ code: -1, error: error });
