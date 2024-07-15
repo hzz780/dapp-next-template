@@ -2,7 +2,6 @@
 import { io } from 'socket.io-client';
 import { Button } from 'antd'
 import {useEffect, useState} from 'react';
-import {response} from 'express';
 
 export default function SocketPage() {
   const [socket, setSocket] = useState<any>();
@@ -12,8 +11,8 @@ export default function SocketPage() {
     if (!socket) {
       return;
     }
-    socket.on('answer-chain-gpt', (socketId: string, message: string) => {
-      console.log('answer-chain-gpt: ', socketId, message);
+    socket.on('answer', (message: string) => {
+      console.log('answer: ', message);
       setAnswer(message);
     });
   }, [socket]);
@@ -27,8 +26,9 @@ export default function SocketPage() {
       console.log('_socket: ', _socket);
       setSocket(_socket);
       _socket.on("connect", () => {
-        console.log(_socket); // x8WIv7-mJelg7on_ALbx
+        console.log(_socket);
         console.log('connect !!!');
+        setAnswer('connect !!!');
       });
     }}>Connect</Button>
     <Button onClick={() => {
@@ -41,8 +41,8 @@ export default function SocketPage() {
     }}>Question</Button>
     <Button onClick={() => {
       console.log('hello: ');
-      socket.emit("hello", "world");
-    }}>Hello</Button>
+      socket.emit("hello", "hzz780");
+    }}>Trigger event answer</Button>
     <div>answer: </div>
     <div>{answer}</div>
   </>

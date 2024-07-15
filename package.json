@@ -26,6 +26,7 @@
     "@next/third-parties": "^14.2.3",
     "@reduxjs/toolkit": "^2.2.5",
     "@sentry/nextjs": "^8.4.0",
+    "@tanstack/react-query": "^5.51.1",
     "aelf-design": "^1.1.0",
     "aelf-sdk": "^3.4.12",
     "antd": "^5.18.0",
@@ -41,6 +42,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
+    "@tanstack/eslint-plugin-query": "^5.51.1",
     "@testing-library/dom": "^10.1.0",
     "@testing-library/jest-dom": "^6.4.5",
     "@testing-library/react": "^16.0.0",
