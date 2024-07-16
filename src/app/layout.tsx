@@ -5,6 +5,8 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import "./ui/globals.css";
 import { inter } from '@/app/ui/fonts';
 import {StoreProvider} from './StoreProvider';
+import Header from '@/components/Header';
+// import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +24,9 @@ export default function RootLayout({
         <body className={`${inter.className} antialiased`}>
           <AntdRegistry>
             <AelfdRegistry>
+              <Header />
               {children}
+              {/*<Footer />*/}
             </AelfdRegistry>
           </AntdRegistry>
         </body>
