@@ -1,16 +1,18 @@
 'use client'
-import {useEffect} from 'react';
-
+import {useContext} from 'react';
 const { context, trace } = require('@opentelemetry/api');
 import { Button } from 'aelf-design';
-import { getWebTracerWithZone } from './opentelemetry';
+import {registerInstrumentations} from '@opentelemetry/instrumentation';
+import {ExceptionCaptureInstrumentation} from '@/app/demos/opentelemetry/exceptionCaptureInstrumentation';
+import {useOpentelemetry} from '@/hooks/useOpentelemetry';
+// import { aggregateExecutionTime } from 'opentelemetry-launcher';
+import {ExampleService} from '@/app/demos/opentelemetry/decoraterDemo';
 
 const getData = (url: string) => new Promise((resolve, reject) => {
   const req = new XMLHttpRequest();
   req.open('GET', url, true);
   req.setRequestHeader('Content-Type', 'application/json');
   req.setRequestHeader('Accept', 'application/json');
-  req.setRequestHeader('TraceId', 'trace-556688991');
   req.onload = () => {
     resolve(null);
   };
@@ -19,13 +21,11 @@ const getData = (url: string) => new Promise((resolve, reject) => {
   };
   req.send();
 });
-const URL_TEST = 'https://httpbin.org/get?trace=233333';
+// const URL_TEST = 'https://httpbin.org/get?trace=233333';
+const URL_TEST = 'http://localhost:8093/sharp/api/app/book';
 export default function Page() {
-
-  useEffect(() => {
-    getWebTracerWithZone();
-    console.log('getWebTracerWithZone done');
-  }, []);
+  // const webTracerWithZone = useContext(OpentelemetryContext);
+  const webTracerWithZone = useOpentelemetry();
 
   return <>
    <Button onClick={() => {
@@ -38,8 +38,10 @@ export default function Page() {
      });
    }}>Test</Button>
     <Button onClick={() => {
-      const webTracerWithZone = getWebTracerWithZone();
-      for (let i = 0, j = 5; i < j; i += 1) {
+      if (!webTracerWithZone) {
+        return;
+      }
+      for (let i = 0, j = 1; i < j; i += 1) {
         const span1 = webTracerWithZone.startSpan(`cad-files-series-info-${i}`);
         context.with(trace.setSpan(context.active(), span1), () => {
           getData(URL_TEST).then((_data) => {
@@ -52,5 +54,29 @@ export default function Page() {
         });
       }
     }}>Test With Event</Button>
+    <Button onClick={async () => {
+      const res = await fetch(URL_TEST);
+      console.log('fetch response: ', res);
+    }}>Fetch</Button>
+    <Button onClick={async () => {
+      registerInstrumentations({
+        instrumentations: [
+          new ExceptionCaptureInstrumentation({
+            enabled: true,
+            captureUnhandledRejections: true
+          })
+        ],
+      });
+
+      const res = await fetch("/api/demos/sentry-example-api");
+      if (!res.ok) {
+        throw new Error("Sentry Example Frontend Error");
+      }
+    }}>Request Failed</Button>
+    <Button onClick={async () => {
+      const service = new ExampleService();
+      service.syncMethod();
+      await service.asyncMethod();
+    }}>aggregateExecutionTime</Button>
   </>
 }

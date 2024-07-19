@@ -65,4 +65,12 @@ export const menuList: IMenuItemData[] = [
     label: 'API All in one',
     href: '/demos/api-all-in-one',
   },
+  {
+    label: 'opentelemetry',
+    href: '/demos/opentelemetry',
+  },
+  {
+    label: 'opentelemetry-request',
+    href: '/demos/opentelemetry-request',
+  },
 ];
