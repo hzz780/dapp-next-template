@@ -9,6 +9,23 @@ async function justThrowError(message) {
   throw Error(`Promise then, but not catch ${message}`);
 }
 
+const getData = (url) => new Promise((resolve, reject) => {
+  const req = new XMLHttpRequest();
+  req.open('GET', url, true);
+  req.setRequestHeader('Content-Type', 'application/json');
+  req.setRequestHeader('Accept', 'application/json');
+  // req.setRequestHeader('TraceId', 'trace-556688991');
+  req.onload = () => {
+    resolve(null);
+  };
+  req.onerror = () => {
+    reject();
+  };
+  req.send();
+});
+// const URL_TEST = 'https://httpbin.org/get';
+const URL_TEST = 'http://localhost:8093/sharp/api/app/book';
+
 export default function Page() {
   return (
     <div>
@@ -80,6 +97,7 @@ export default function Page() {
         }}>
           Throw error with promise await
         </SButton>
+        <SButton onClick={() => getData(URL_TEST)}>getData</SButton>
         <p>
           Next, look for the error on the{" "}
           <a href="https://hzz780.sentry.io/issues/?project=4507309898727424">Issues Page</a>.
