@@ -1,0 +1,15 @@
+.inputCustomPlaceholder {
+    border: none;
+    outline: none;
+    resize: none;
+    padding: 14px 16px 14px 0;
+    box-sizing: border-box;
+    height: 60px;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.inputCustom-placeholder::placeholder {
+    color: #D6D6D6;
+}

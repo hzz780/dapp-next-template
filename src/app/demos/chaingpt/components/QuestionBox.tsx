@@ -4,7 +4,10 @@ export function QuestionBox({
   children: React.ReactNode
 }) {
   return <div className="w-full h-auto flex flex-col items-end mb-4">
-    <div className="w-auto h-auto lg:text-base text-sm border border-gray-100 rounded-3xl p-2 px-4 bg-gray-100">
+    <div className="w-auto h-auto lg:text-base text-sm
+    border border-[#E0E0E0] rounded-[12px_12px_4px_12px] p-2 px-4 bg-white text-[13px]
+    py-[16px]
+    ">
       {children}
     </div>
   </div>
