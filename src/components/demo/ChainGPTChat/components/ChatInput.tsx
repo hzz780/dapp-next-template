@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
-import SendWait from '@/assets/chain-gpt/send-wait.svg';
-import SendReady from '@/assets/chain-gpt/send-ready.svg';
-import Image from 'next/image';
+import SendWait from '../assets/send-wait.svg';
+import SendReady from '../assets/send-ready.svg';
+// import Image from 'next/image';
 
 export const ChatInput = ({
                      sendMessage
@@ -39,9 +39,9 @@ export const ChatInput = ({
         />
       </div>
       <div className="w-[24px] flex justify-center">
-        <Image
+        <img
           onClick={handleSend}
-          src={message.trim() ? SendReady : SendWait}
+          src={message.trim() ? SendReady.src : SendWait.src}
           alt="send ready"
         />
       </div>

@@ -1,4 +1,4 @@
-import {AnswerBox} from '@/app/demos/chaingpt/components/AnswerBox';
+import {AnswerBox} from './components/AnswerBox';
 import React from 'react';
 function TextList({
                     children,

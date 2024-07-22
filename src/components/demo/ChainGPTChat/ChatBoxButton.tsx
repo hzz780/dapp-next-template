@@ -1,9 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {ChainGPTLogo} from '@/app/demos/chaingpt/components/ChainGPTLogo';
-import {TipBox} from '@/app/demos/chaingpt/components/TipBox';
-import {CustomChatBox} from '@/app/demos/chaingpt/CustomChatBox';
+import {ChainGPTLogo} from './components/ChainGPTLogo';
+import {TipBox} from './components/TipBox';
+import {CustomChatBox} from './CustomChatBox';
 
-export function ChatBoxButton() {
+export function ChatBoxButton({apiUri}) {
   const [hiddenTip, setHiddenTip] = useState(true);
   const [hiddenChat, setHiddenChat] = useState(true);
   const [readyToShow, setReadyToShow] = useState(false);
@@ -29,6 +29,7 @@ export function ChatBoxButton() {
         onClose={() => {
           setHiddenChat(true);
         }}
+        apiUri={apiUri}
       />
     </div>
   </>

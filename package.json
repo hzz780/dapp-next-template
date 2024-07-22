@@ -45,6 +45,7 @@
     "aelf-sdk": "^3.4.12",
     "antd": "^5.18.0",
     "antd-mobile": "^5.36.1",
+    "chaingpt-component": "^0.0.1",
     "graphql": "^16.9.0",
     "next": "^14.2.3",
     "opentelemetry-launcher": "^0.0.3",

@@ -1,8 +1,8 @@
-import { QuestionBox } from '@/app/demos/chaingpt/components/QuestionBox';
-import { AnswerBox } from '@/app/demos/chaingpt/components/AnswerBox';
+import { QuestionBox } from './QuestionBox';
+import { AnswerBox } from './AnswerBox';
 import React, { useEffect, useRef, useState } from 'react';
-import {DotTyping} from '@/components/Loading/DotTyping';
-import {ChatInput} from '@/app/demos/chaingpt/components/ChatInput';
+import {DotTyping} from './DotTyping';
+import {ChatInput} from './ChatInput';
 
 interface IChatItem {
   text: string | React.FC;
@@ -13,10 +13,12 @@ interface IChatItem {
 // import VirtualList from 'rc-virtual-list';
 export default function ChatBox({
                                   defaultList = [],
-                                  Welcome
+                                  Welcome,
+                                  apiUri
                                 }: {
   defaultList?: IChatItem[],
-  Welcome?: React.FC
+  Welcome?: React.FC,
+  apiUri: string
 }) {
   const [chatList, setChainList] = useState<IChatItem[]>(defaultList);
   const [searchDisable, setSearchDisable] = useState(false);
@@ -35,7 +37,7 @@ export default function ChatBox({
     setSearchDisable(true);
 
     const askChainGPT = async (question: string) => {
-      const url = '/api/demos/chaingpt';
+      const url = apiUri; //'/api/demos/chaingpt';
       let data;
 
       const response = await fetch(url, {

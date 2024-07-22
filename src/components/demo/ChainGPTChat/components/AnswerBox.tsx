@@ -1,5 +1,5 @@
-import Image from 'next/image';
-import ChainGPTIcon from '@/assets/chain-gpt/icon-2.svg';
+// import Image from 'next/image';
+import ChainGPTIcon from '../assets/icon-2.svg';
 import React from 'react';
 
 export function AnswerBox({
@@ -19,8 +19,8 @@ export function AnswerBox({
 
 function ChainGPTLogo() {
   return <>
-    <Image
-      src={ChainGPTIcon}
+    <img
+      src={ChainGPTIcon.src}
       alt="chainGPT close"
       className="w-[32px] h-[32px]"
     />

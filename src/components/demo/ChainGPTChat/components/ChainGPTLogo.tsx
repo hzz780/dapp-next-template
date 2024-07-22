@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import ChainGPTIcon from '@/assets/chain-gpt/icon.svg';
+// import Image from 'next/image';
+import ChainGPTIcon from '../assets/icon.svg';
 import React from 'react';
 
 export function ChainGPTLogo() {
   return <>
-    <Image
-      src={ChainGPTIcon}
+    <img
+      src={ChainGPTIcon.src}
       alt="chainGPT close"
       className="w-[64px] h-[64px]"
     />

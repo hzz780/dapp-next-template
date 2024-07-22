@@ -7,15 +7,19 @@
  * and inject antd's first-screen styles into HTML to avoid page flicker.
  * https://ant.design/docs/react/use-with-next
  **/
-import React, {useEffect, useState} from 'react';
-import {ChainGPTLogo} from '@/app/demos/chaingpt/components/ChainGPTLogo';
-import {TipBox} from '@/app/demos/chaingpt/components/TipBox';
-import {CustomChatBox} from '@/app/demos/chaingpt/CustomChatBox';
+import React from 'react';
+import {ChainGPTLogo} from '@/components/demo/ChainGPTChat/components/ChainGPTLogo';
+import {TipBox} from '@/components/demo/ChainGPTChat/components/TipBox';
+import {CustomChatBox} from '@/components/demo/ChainGPTChat/CustomChatBox';
 import {Button} from 'antd';
-import { ChatBoxButton } from '@/app/demos/chaingpt/ChatBoxButton';
+// import { ChatBoxButton } from '@/components/demo/ChainGPTChat/ChatBoxButton';
+import {MyComponent, ChatBoxButton} from 'chaingpt-component';
 
 export default function Page() {
   return <div className="p-3 flex">
+    <>
+      <MyComponent/>
+    </>
     <div>
       <TipBox />
       <ChainGPTLogo />
@@ -23,7 +27,9 @@ export default function Page() {
     </div>
     <div className="h-[700px] w-[500px] border-[1px] border-[#CCC] rounded ml-[16px] relative">
       <div className="absolute right-[8px] bottom-[8px] flex flex-col items-end">
-        <ChatBoxButton />
+        <ChatBoxButton
+          apiUri="/api/demos/chaingpt"
+        />
       </div>
     </div>
     <Button onClick={() => {
